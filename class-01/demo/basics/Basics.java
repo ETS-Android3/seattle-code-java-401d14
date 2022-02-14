@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Random;
 
 public class Basics
 {
@@ -95,6 +96,9 @@ public class Basics
     int returnInt = testFunc(10);
     System.out.println("returnInt: " + returnInt);
     System.out.println("testFunc return is: " + testFunc(10));
+
+    Random myRandom = new Random();
+    float myRandNum = myRandom.nextFloat();
   }
 
   // Function syntax basically is (for now): "public static TYPE_OF_RETURN NAME_OF_FUNCTION(ARGUMENTS)"
