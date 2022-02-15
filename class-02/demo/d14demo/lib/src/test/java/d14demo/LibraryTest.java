@@ -4,6 +4,9 @@
 package d14demo;
 
 import org.junit.jupiter.api.Test;
+
+import java.util.Arrays;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryTest {
@@ -24,5 +27,13 @@ class LibraryTest {
     void Test_adding_students() {
         Library sut = new Library();
         sut.listStudents();
+    }
+
+    @Test
+    void Test_reverse() {
+      int[] testInts = {2, -1, 0, 5, 9};
+      Library sut = new Library();
+      sut.reverse(testInts);
+      System.out.println(Arrays.toString(testInts));
     }
 }

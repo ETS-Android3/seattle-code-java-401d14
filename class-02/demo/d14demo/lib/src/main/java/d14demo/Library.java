@@ -59,4 +59,23 @@ public class Library {
 
       int anInt = (Integer)whatsInHere.get(0);
     }
+
+  int[] reverse(int[] inputArray)
+  {
+    if (inputArray.length == 0)
+      return inputArray;
+    int beginIndex = 0;
+    int endIndex = inputArray.length - 1;
+    int temp;
+    while (beginIndex < endIndex)
+    {
+      temp = inputArray[beginIndex];
+      inputArray[beginIndex] = inputArray[endIndex];
+      inputArray[endIndex] = temp;
+      beginIndex++;
+      endIndex--;
+    }
+
+    return inputArray;
+  }
 }
