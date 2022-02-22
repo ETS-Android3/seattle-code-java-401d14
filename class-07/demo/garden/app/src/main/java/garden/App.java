@@ -3,12 +3,41 @@
  */
 package garden;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+import garden.plant.*;
+import garden.plant.fruit.Strawberry;
+import garden.plant.fruit.Tomato;
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
-    }
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class App {
+  public String getGreeting() {
+      return "Hello World!";
+  }
+
+  public static void main(String[] args) {
+    System.out.println(new App().getGreeting());
+    Garden myGarden = new Garden();
+    Strawberry aStrawberry = new Strawberry(1);
+    Tomato myTomato = new Tomato("Big Boy", 2);
+    Rosemary coolRosemary = new Rosemary(.5);
+    myGarden.plants.add(aStrawberry);
+    myGarden.plants.add(myTomato);
+    myGarden.plants.add(coolRosemary);
+
+    Plant firstPlant = myGarden.plants.get(0);
+    Strawberry strawberryCopy = null;
+    Tomato tomatoCopy = null;
+    if (firstPlant instanceof Strawberry)
+      strawberryCopy = (Strawberry)firstPlant;
+    if (firstPlant instanceof Tomato)
+      tomatoCopy = (Tomato)firstPlant;
+
+    Kelp anotherPlant = new Kelp(3);
+    Waterable aPlantThatIsWaterable = new Strawberry(3);
+    ((Prunable)aPlantThatIsWaterable).prune();  // allows you to type cast without making another variable
+
+    System.out.println("We're done");
+  }
 }
