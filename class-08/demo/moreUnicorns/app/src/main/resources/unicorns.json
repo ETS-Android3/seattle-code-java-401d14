@@ -1,0 +1,74 @@
+[
+  {
+    "color": "black",
+    "numOfHorns": 0.0,
+    "specialPower": {
+      "name": "breathing fire",
+      "description": "gouts of flame into the sky"
+    }
+  },
+  {
+    "color": "navy",
+    "numOfHorns": 1.5,
+    "specialPower": {
+      "name": "coding",
+      "description": "coding at the speed of light"
+    }
+  },
+  {
+    "color": "rainbow",
+    "numOfHorns": 1.0,
+    "specialPower": {
+      "name": "flying",
+      "description": "I\u0027m flying wheee"
+    }
+  },
+  {
+    "color": "teal",
+    "numOfHorns": 2.0,
+    "specialPower": {
+      "name": "shooting stars!",
+      "description": "I\u0027m a shooting star / Across the midnight sky"
+    }
+  },
+  {
+    "color": "blue",
+    "numOfHorns": 3.0,
+    "specialPower": {
+      "name": "teleportation",
+      "description": "spooky action at a distance"
+    }
+  },
+  {
+    "color": "green",
+    "numOfHorns": 1.0,
+    "specialPower": {
+      "name": "time travel",
+      "description": "like in that Palm Springs movie"
+    }
+  },
+  {
+    "color": "red",
+    "numOfHorns": 5.0,
+    "specialPower": {
+      "name": "flying",
+      "description": "my flying is way cooler than that other unicorn"
+    }
+  },
+  {
+    "color": "lavender",
+    "numOfHorns": 1.0,
+    "specialPower": {
+      "name": "calligraphy",
+      "description": "I\u0027m an Asian unicorn"
+    }
+  },
+  {
+    "color": "salmon",
+    "numOfHorns": 0.0,
+    "specialPower": {
+      "name": "horn envy",
+      "description": "my rage is hotter than 1000 suns"
+    }
+  }
+]

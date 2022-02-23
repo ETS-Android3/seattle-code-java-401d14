@@ -1,0 +1,8 @@
+{
+  "color": "red",
+  "numOfHorns": 5.0,
+  "specialPower": {
+    "name": "flying",
+    "description": "my flying is way cooler than that other unicorn"
+  }
+}
