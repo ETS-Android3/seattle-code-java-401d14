@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Welcome to Salmon Cookies!</title>
+</head>
+<body>
+    <div th:if="${true}">All the best cookies for salmon!!!</div>
+    <h1>All Salmon Cookies stores</h1>
+    <span th:each="store : ${stores}">
+      <span th:text="${'Store Name: ' + store.storeName}"></span>
+      <br><span th:text="${'Average Number Of Cookies Per Day: ' + store.averageNumberOfCookiesPerDay}"></span>
+      <br><span th:text="${'Store Opening Date: ' + store.storeOpeningDate}"></span>
+      <br><a th:href="${'/edit-store/' + store.storeName}">Edit this store</a>
+      <br><br>
+      <a th:href="${'/view-employees/' + store.id}">View Employees</a>
+    </span>
+
+    <form action="/addCookiesStore/" method="post">
+      <fieldset>
+        <legend>Add a Salmon Cookies Store</legend>
+        <label for="storeName">Store Name</label>
+        <input type="text" name="storeName">
+        <label for="averageNumberOfCookiesPerDay">Average Number Of Cookies Per Day</label>
+        <input type="text" name="averageNumberOfCookiesPerDay">
+        <label for="storeOpeningDate">Store Opening Date</label>
+        <input type="date" name="storeOpeningDate">
+        <input type="submit" value="Add Store">
+      </fieldset>
+    </form>
+    <div th:text="${testString}">Test Div</div>
+</body>
+</html>

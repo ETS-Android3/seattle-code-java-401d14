@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Edit Store</title>
+</head>
+<body>
+<form action="/edit-store" th:method="put">
+  <input type="hidden" name="id" th:value="${store.id}">
+  <label for="storeName">Store Name</label>
+  <input type="text" name="storeName" th:value="${store.storeName}">
+  <br><label for="averageNumberOfCookiesPerDay">Average Number Of Cookies Per Day</label>
+  <input type="text" name="averageNumberOfCookiesPerDay" th:value="${store.averageNumberOfCookiesPerDay}">
+  <br><label for="storeOpeningDate">Store Opening Date</label>
+  <input type="date" name="storeOpeningDate" th:value="${store.storeOpeningDate}">
+  <input type="submit" value="Edit Store">
+  <br>
+</form>
+<form action="/delete-store" th:method="delete">
+  <input type="hidden" name="id" th:value="${store.id}">
+  <input type="submit" value="Delete Store">
+  <br><br>
+</form>
+<span th:each="employee : ${employees}">
+  <div>Employees</div>
+  <div th:text="${'Employee Name: ' + employee.name}"></div>
+  <div th:text="${'Employee Pay Per Hour: ' + employee.payPerHour}"></div>
+</span>
+<br><br>
+<form action="/add-employee" th:method="post">
+  <input type="hidden" name="storeId" th:value="${store.id}">
+  <label for="name">Employee Name</label>
+  <input type="text" name="name">
+  <br><label for="payPerHour">Employee Hourly Wage (in US dollars)</label>
+  <input type="text" name="payPerHour">
+  <input type="submit" value="Add Employee">
+  <br>
+</form>
+
+</body>
+</html>
