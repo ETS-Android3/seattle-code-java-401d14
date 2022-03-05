@@ -1,15 +1,15 @@
-package datastructures.stack;
+package datastructures.tree;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class StackTest
+public class BinarySearchTreeTest
 {
   @Test
   void testAMethod()
   {
-    Stack<String> sut = new Stack<String>();
+    BinarySearchTree sut = new BinarySearchTree();
     System.out.println(sut);
     assertTrue(true);
   }
