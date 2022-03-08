@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RoboBook Test</title>
+</head>
+<body>
+<br><div th:replace="/fragments/nav-header :: h3"></div>
+<h1>Test Page (only logged-in users here!)</h1>
+<h3 th:if="${errorMessage != null}" th:text="${errorMessage}"></h3>
+<h3 th:if="${loggedInUsername != null}" th:text="${'Welcome, ' + loggedInUsername}"></h3>
+<h3 th:if="${lookingUpUsername != null}" th:text="${'The username for id ' + lookingUpUserId + ' is ' + lookingUpUsername }"></h3>
+<h3 th:if="${lookingUpUserBirthday != null}" th:text="${'Birthday for that id is ' + #temporals.format(lookingUpUserBirthday, 'yyyy-MM-dd') }"></h3>
+</body>
+</html>
