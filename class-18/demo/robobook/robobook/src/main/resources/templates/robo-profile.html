@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RoboBook Test</title>
+</head>
+<body>
+<br><div th:replace="/fragments/nav-header :: h3"></div>
+<h1>Test Page (only logged-in users here!)</h1>
+<h3 th:if="${errorMessage != null}" th:text="${errorMessage}"></h3>
+<h3 th:if="${loggedInUsername != null}" th:text="${'Welcome, ' + loggedInUsername}"></h3>
+<h3 th:if="${lookingUpUsername != null}" th:text="${'The username for id ' + lookingUpUserId + ' is ' + lookingUpUsername }"></h3>
+<h3 th:if="${lookingUpUserBirthday != null}" th:text="${'Birthday for that id is ' + #temporals.format(lookingUpUserBirthday, 'yyyy-MM-dd') }"></h3>
+
+Managers:
+<br>
+<span th:each="manager : ${robotsThatManageProfileUser}">
+  <span th:text="${manager.getNickName()}"></span>
+  <br>
+</span>
+<br>
+<br>
+Employees:
+<br>
+<span th:each="employee : ${robotsThatAreEmployedByProfileUser}">
+  <span th:text="${employee.getNickName()}"></span>
+  <br>
+</span>
+
+<form th:if="${loggedInUsername != lookingUpUsername}" th:action="${'/manage-user/' + profileId}" th:method="PUT">
+  <input type="submit" value="Manage This Robot">
+</form>
+<form th:if="${loggedInUsername != lookingUpUsername}" th:action="${'/employ-user/' + profileId}" th:method="PUT">
+  <input type="submit" value="Be Employed This Robot">
+</form>
+</body>
+</html>

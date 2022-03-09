@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>LinkedRobo Home</title>
+</head>
+<body>
+<div>First fragment type:</div>
+<br><div th:replace="/fragments/nav-header :: h3"></div>
+<br><div>Second fragment type:</div>
+<br><div th:replace="/fragments/nav-header :: user-header"></div>
+<pre th:utext="${'Your nickname is: ' + nickname + '.'}"></pre>
+<form action="/logout" th:method="delete">
+  <input type="submit" value="Log Out">
+</form>
+<a th:if="${username == 'RoboEd'}" href="/roboprofile/10">Look at Dave's profile</a>
+</body>
+</html>
