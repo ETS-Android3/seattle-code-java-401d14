@@ -23,9 +23,8 @@ public class RoboBookController
   @Autowired
   RoboUserRepository roboUserRepository;
 
-  @ResponseStatus(value = HttpStatus.NOT_FOUND)
+  @ResponseStatus(value = HttpStatus.NOT_FOUND, reason = "A test message that says the resource wasn't found")
   public static class ResourceNotFoundException extends RuntimeException {
-
   }
 
   // Cheat Sheet 8A: Make a home page route
@@ -46,8 +45,6 @@ public class RoboBookController
 
     if(isError)
     {
-      m.addAttribute("errorMessage", "Testing the error");
-      redir.addAttribute("errorMessage", "This is the 404 error message I made");
       throw new ResourceNotFoundException();
     }
 
