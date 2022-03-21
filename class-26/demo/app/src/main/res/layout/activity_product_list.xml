@@ -2,9 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/productListConstraintLayout"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  tools:context=".MainActivity">
+  android:background="#E4D2D2"
+  tools:context=".activity.ProductListActivity">
 
   <TextView
     android:id="@+id/productNameTextView"
@@ -35,9 +37,10 @@
     app:layout_constraintTop_toTopOf="parent" />
 
   <ImageView
-    android:id="@+id/imageView"
+    android:id="@+id/productImageView"
     android:layout_width="291dp"
     android:layout_height="204dp"
+    android:background="#FFFFFF"
     android:contentDescription="@string/profile_image"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
@@ -55,15 +58,15 @@
     android:layout_marginStart="124dp"
     android:layout_marginTop="68dp"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/imageView"
+    app:layout_constraintTop_toBottomOf="@+id/productImageView"
     tools:text="Submitted text goes here" />
 
   <Button
-    android:id="@+id/submitButton"
+    android:id="@+id/productListOrderButton"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginTop="16dp"
-    android:text="@string/submit"
+    android:text="@string/order"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintHorizontal_bias="0.498"
     app:layout_constraintStart_toStartOf="parent"
