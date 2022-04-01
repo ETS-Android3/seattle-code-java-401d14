@@ -1,11 +1,11 @@
 package datastructures.linkedlist;
 
-public class Node
+public class Node<T>
 {
-  public int value;
+  public T value;
   public Node next = null;
 
-  Node(int value)
+  Node(T value)
   {
     this.value = value;
   }

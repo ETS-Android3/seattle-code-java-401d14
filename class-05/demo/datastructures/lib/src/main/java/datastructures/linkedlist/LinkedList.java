@@ -1,9 +1,9 @@
 package datastructures.linkedlist;
 
-public class LinkedList
+public class LinkedList<T>
 {
-  Node head = null;
-  Node tail = null;  // not truly required, but can be useful
+  Node<T> head = null;
+  Node<T> tail = null;  // not truly required, but can be useful
 
   public void insert(int value)
   {
