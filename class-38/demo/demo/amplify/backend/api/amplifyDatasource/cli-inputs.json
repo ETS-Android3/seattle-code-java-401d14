@@ -10,7 +10,7 @@
     },
     "conflictResolution": {},
     "apiName": "amplifyDatasource",
-    "gqlSchemaPath": "C:\\myRepos\\seattle-code-java-401d14\\class-37\\demo\\demo\\amplify\\backend\\api\\amplifyDatasource\\schema.graphql",
+    "gqlSchemaPath": "C:\\myRepos\\seattle-code-java-401d14\\class-38\\demo\\demo\\amplify\\backend\\api\\amplifyDatasource\\schema.graphql",
     "additionalAuthTypes": []
   }
 }
